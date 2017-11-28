@@ -119,4 +119,35 @@ code and guarantee code correctness. In Javascript we can also give a
 description to assert statements to better see where any possible errors in
 the code are. There can also be function definitions to put in assert statements
 to help do more verbose and powerful invariants.
+\section{Testing}
+The data gathered by timing the code on data sets is as follows:
+\begin{center}
+\begin{tabular}{||c | c c c||}
+	\hline
+	trial & 1 & 2 & 3\\
+	\hline\hline
+	Kruskal&.11s&.09s&.10s\\
+	\hline
+	Dijkstra&.12s&13s&10s\\
+	\hline
+\end{tabular}
+\end{center}
+Overall, they were close in runtime with Dijkstra's algorithm taking slightly
+more time on average. This makes sense because the runtime of Dijkstra's 
+algorithm is $O(|V|^{2})$ while Kruskal is $O(|E|log|V|)$
+\section{Problems Encountered}
+The main problem I encountered when implementing the algorithms was the
+language. I started out with javascript because I personally thought it 
+would be easy to give a nice visualization of the graph, however, in 
+practice nothing was working out. After some time I went to python and
+got the programs to work smoothly. The only problem I had while implementing
+in python was the making of a graph class. Dijkstra's and Kruskal's ended up
+needing slightly different graph classes for a clean implementation so I split
+it into two programs
+\section{Conclusion}
+In the end, both algorithms are quintessential graph algorithms that have
+many applications and purposes in the world of computer science. Dijkstra's
+algorithm tends to take the spotlight due to being more applicable to 
+common problems people are trying to solve, but both algorithms should be
+considered as building blocks for solving more complicated graph problems.
 \end{document}
